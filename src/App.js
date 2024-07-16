@@ -4,17 +4,19 @@ import { useState } from 'react';
 
 function App() {
   let [portfolioTitle, setPortfolioTitle] = useState([
-    '[Team] 쇼핑몰',
-    '[개인] 애플 스토어',
-    '[개인] 사이드 프로젝트',
+    'Shoes shop',
+    'Apple store',
+    'Hangman game',
+    'Youtube music',
   ]);
 
   let [like, setLike] = useState([0, 0, 0]);
+  const [link, setLink] = useState(['/myshop','/myAppleStore','/myHangmanGame',''])
 
   return (
     <div className="App">
       <div>
-        <h4 className="black-nav">Rins's Portfolio List</h4>
+        <h4 className="black-nav">Rin's Portfolio List</h4>
       </div>
 
       {portfolioTitle.map((props, i) => {
@@ -23,21 +25,25 @@ function App() {
             <h4 className="number">No. {i + 1}</h4>
             <h2>
               {props}
-              <span
-                onClick={() => {
-                  let copy = [...like];
-                  copy[i] = copy[i] + 1;
-                  setLike(copy);
-                }}
-              >
-                <img src="like.png" alt="like" className="likeImg" />
-              </span>
-              {like[i]}
             </h2>
-            <button className="detailBtn">보러가기</button>
+            <div className='container'>
+              <button className='goBtn'><a href={`${link[i]}`} className='link'>GO</a></button>
+              <span
+                  onClick={() => {
+                    let copy = [...like];
+                    copy[i] = copy[i] + 1;
+                    setLike(copy);
+                  }}
+                >
+                  <img src="like.png" alt="like" className="likeImg" />
+              </span>
+              <span className='likeNum'> {like[i]}</span>
+            </div>
           </div>
         );
       })}
+
+
     </div>
   );
 }

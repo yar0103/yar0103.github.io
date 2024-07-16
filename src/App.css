@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 div {
   box-sizing: border-box;
 }
@@ -30,46 +34,38 @@ div {
   width: 100%;
   color: white;
   padding-left: 20px;
-  height: 50px;
+  height: 80px;
+  line-height: 80px;
   margin: auto 0;
 }
 
 .likeImg{
-  width: 22px;
-  padding: 0 10px;
+  width: 25px;
+  padding: 2px 10px 0 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.likeNum{
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.goBtn {
+  border: none;
+  border-radius: 7px;
+  background: black;
+  padding: 5px 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link{
+  color: #fff;
+  font-weight: 500;
+}
+
+.container{
   display: flex;
-  flex-direction: column;
+  justify-content: baseline;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
