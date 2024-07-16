@@ -1,108 +1,43 @@
 /* eslint-disable */
-import "./App.css";
-import { useState } from "react";
+import './App.css';
+import { useState } from 'react';
 
 function App() {
-  let [글제목, 글제목변경] = useState([
-    "쇼핑몰",
-    "애플 스토어",
-    "사이드 프로젝트",
+  let [portfolioTitle, setPortfolioTitle] = useState([
+    '[Team] 쇼핑몰',
+    '[개인] 애플 스토어',
+    '[개인] 사이드 프로젝트',
   ]);
 
-  let [따봉, 따봉변경] = useState([0, 0, 0]);
-  let [modal, setModal] = useState(false);
-  let [title, setTitle] = useState(0);
-  let [입력값, 입력값변경] = useState("");
+  let [like, setLike] = useState([0, 0, 0]);
 
   return (
     <div className="App">
       <div>
-        <h4 className="black-nav">A Rins's Portfolio List</h4>
+        <h4 className="black-nav">Rins's Portfolio List</h4>
       </div>
 
-      {글제목.map((props, i) => {
+      {portfolioTitle.map((props, i) => {
         return (
           <div className="list">
-            <h2
-              onClick={() => {
-                setModal(!modal);
-                setTitle(i);
-              }}
-            >
-              {i + 1} 번째 포트폴리오
-            </h2>
-
-            <h4>
+            <h4 className="number">No. {i + 1}</h4>
+            <h2>
               {props}
               <span
                 onClick={() => {
-                  let copy = [...따봉];
+                  let copy = [...like];
                   copy[i] = copy[i] + 1;
-                  따봉변경(copy);
+                  setLike(copy);
                 }}
               >
-                👍
+                <img src="like.png" alt="like" className="likeImg" />
               </span>
-              {따봉[i]}
-            </h4>
-            <p>2월 17일 발행</p>
-            <p>상세내용</p>
+              {like[i]}
+            </h2>
+            <button className="detailBtn">보러가기</button>
           </div>
         );
       })}
-
-      <input
-        onChange={(e) => {
-          입력값변경(e.target.value);
-        }}
-      ></input>
-      <button
-        onClick={() => {
-          let copy = [...글제목];
-          copy.unshift(입력값);
-          글제목변경(copy);
-        }}
-      >
-        글발행
-      </button>
-
-      {modal == false ? null : (
-        <Modal
-          글제목={글제목}
-          글제목변경={글제목변경}
-          title={title}
-          setModal={setModal}
-        />
-      )}
-    </div>
-  );
-}
-
-function Modal(props, i) {
-  return (
-    <div className="modal">
-      <h4>{props.글제목[props.title]}</h4>
-      <p>날짜</p>
-      <p>상세내용</p>
-      <button
-        onClick={() => {
-          let copy = [...props.글제목];
-          copy[0] = "여자 코트 추천";
-          props.글제목변경(copy);
-        }}
-      >
-        글수정
-      </button>
-      <button
-        onClick={() => {
-          let copy = [...props.글제목];
-          copy.splice(i, 1);
-          props.글제목변경(copy);
-          props.setModal(false);
-        }}
-      >
-        글삭제
-      </button>
     </div>
   );
 }
