@@ -9,11 +9,12 @@ function App() {
     'Hangman game',
     'Todo List',
     'Youtube music',
-    'MiniGame - Photo matching'
+    'MiniGame - Photo matching',
+    'MiniGame - Typing Words',
   ]);
 
   let [like, setLike] = useState([0, 0, 0]);
-  const [link, setLink] = useState(['/myshop','/myAppleStore','/myHangmanGame','/myTodoList','','/mini_photoMatching'])
+  const [link, setLink] = useState(['/myshop','/myAppleStore','/myHangmanGame','/myTodoList','','/mini_photoMatching','/mini_typingWords'])
 
   return (
     <div className="App">
