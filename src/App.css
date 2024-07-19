@@ -68,4 +68,14 @@ div {
   align-items: center;
 }
 
+.totop{
+  z-index: 1;
+  display: block;
+  position: absolute;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  right: 30px;
+  width: 30px;
+}
+
 

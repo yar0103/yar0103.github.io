@@ -3,18 +3,47 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  let [portfolioTitle, setPortfolioTitle] = useState([
-    'Shoes shop',
-    'Apple store',
-    'Hangman game',
-    'Todo List',
-    'Youtube music',
-    'MiniGame - Photo matching',
-    'MiniGame - Typing Words',
+  let [portfolio, setPortfolio] = useState([
+    {
+      title: 'Shoes shop',
+      link: '/myshop', 
+      like: 0
+    },
+    {
+      title: 'Apple store',
+      link: '/myAppleStore', 
+      like: 0
+    },
+    {
+      title: 'Hangman game',
+      link: '/myHangmanGame', 
+      like: 0
+    },
+    {
+      title: 'Todo List',
+      link: '/myTodoList', 
+      like: 0
+    },
+    {
+      title: 'Youtube music',
+      link: '', 
+      like: 0
+    },
+    {
+      title: 'MiniGame - Photo matching',
+      link: '/mini_photoMatching', 
+      like: 0
+    },
+    {
+      title: 'MiniGame - Typing Words',
+      link: '/mini_typingWords', 
+      like: 0
+    },
   ]);
 
-  let [like, setLike] = useState([0, 0, 0]);
-  const [link, setLink] = useState(['/myshop','/myAppleStore','/myHangmanGame','/myTodoList','','/mini_photoMatching','/mini_typingWords'])
+  function totop () {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div className="App">
@@ -22,30 +51,33 @@ function App() {
         <h4 className="black-nav">Rin's Portfolio List</h4>
       </div>
 
-      {portfolioTitle.map((props, i) => {
+      {portfolio.map((props, i) => {
         return (
-          <div className="list">
+          <div className="list" >
             <h4 className="number">No. {i + 1}</h4>
             <h2>
-              {props}
+              {props.title}
             </h2>
             <div className='container'>
-              <button className='goBtn'><a href={`${link[i]}`} className='link'>GO</a></button>
+              <button className='goBtn'><a href={props.link} className='link'>GO</a></button>
               <span
                   onClick={() => {
-                    let copy = [...like];
-                    copy[i] = copy[i] + 1;
-                    setLike(copy);
+                    setPortfolio((prev)=>{
+                      let copy = [...prev]
+                      copy[i].like++;
+                      return copy;
+                    })
                   }}
                 >
                   <img src="like.png" alt="like" className="likeImg" />
               </span>
-              <span className='likeNum'> {like[i]}</span>
+              <span className='likeNum'> {props.like}</span>
             </div>
           </div>
         );
       })}
 
+      <img src='totop.png' alt='totop' className='totop' onClick={totop}/>
 
     </div>
   );
