@@ -11,7 +11,7 @@ function App() {
     },
     {
       title: 'Apple store',
-      link: '/myAppleStore', 
+      link: '/appleStore', 
       like: 0
     },
     {
