@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 55px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.visual{
+  width: 1920px;
+  height: 1080px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-img-overlay{
+  background-color: black;
+  opacity: 0.5;
+}
+
+.card-img-overlay > * {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-toggler{
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#dark-mode {
+  background-color: black;
+  color: rgb(232, 232, 232);
+}
+
+#light-mode {
+  background-color: #fff;
+  color: black;
+}
+
+#dark-mode ul > li > a {
+  color: #fff !important;
+}
+
+.dark-mode-switch .react-switch-handle {
+  background-color: black !important;
+}
+
+.light-mode-switch .react-switch-handle {
+  background-color: white !important;
+}
+
+.card > .card-img-overlay:hover {
+  font-size: 28px;
+  opacity: 0.7;
+  transition: all 0.5s;
 }
