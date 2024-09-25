@@ -8,14 +8,20 @@ import Projects from './components/Projects';
 import Header from './components/Header';
 
 function App() {
+
   const [theme, setTheme] = useState(false);
 
   const changeMode = () => {
     setTheme(!theme);
   };
 
+  function totop () {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="App" id={theme ? 'dark-mode' : 'light-mode'}>
+
       {/* header */}
       <Header theme={theme} changeMode={changeMode} />
 
@@ -26,7 +32,7 @@ function App() {
       <Introduction theme={theme} setTheme={setTheme} changeMode={changeMode}/>
 
       {/* projects */}
-      <Projects />
+      <Projects  />
 
       {/* board */}
       <div className="container-md mt-4">
@@ -34,6 +40,11 @@ function App() {
       </div>
 
       {/* footer */}
+      <div className='footer'>
+        footer가 과연 필요한가?
+      </div>
+
+      <img src='/image/totop.png' alt='totop' className='totop' onClick={totop}/>
     </div>
   );
 }
