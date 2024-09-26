@@ -1,29 +1,27 @@
+import { useState } from 'react';
+import { visual } from '../data';
+
 const Visual = () => {
+  const [visualImage] = useState(visual);
+  console.log(visualImage);
   return (
-    <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true">
+    <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true" style={{ marginTop: '160px' }}>
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img
-            src="image/website-1.png"
-            className="d-block w-100"
-            alt="visual-1"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="image/website-2.png"
-            className="d-block w-100"
-            alt="visual-2"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            src="image/website-3.png"
-            className="d-block w-100"
-            alt="visual-3"
-          />
-        </div>
+
+        {visualImage.map((img, i) => {
+          return (
+            <div className="carousel-item active" key={i}>
+              <img
+                src={visualImage[i].image}
+                className="d-block w-100"
+                alt="visual"
+              />
+            </div>
+          )
+        })}
+
       </div>
+      {/* prev Btn */}
       <button
         className="carousel-control-prev"
         type="button"
@@ -33,6 +31,7 @@ const Visual = () => {
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
+      {/* next Btn */}
       <button
         className="carousel-control-next"
         type="button"

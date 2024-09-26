@@ -1,18 +1,25 @@
+.navbarWrapper {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.visual {
+  width: 100%;
+  height: calc(100vh - 160px);
+  object-fit: cover;
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
 .logo {
-  width: 55px;
-}
-
-.visual{
-  width: 1920px;
-  height: 1080px;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
+  width: 75px;
 }
 
 .card-img-overlay{
@@ -57,11 +64,10 @@ a {
 }
 
 .totop{
-  z-index: 1;
-  display: block;
-  position: absolute;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  right: 20px;
-  width: 40px;
+  float: right;
+  font-size: 50px;
+  margin-right: 1.2rem;
+  position: fixed;
+  bottom: 40px;
+  right: -0.5rem;
 }

@@ -1,8 +1,12 @@
 import ReactSwitch from 'react-switch';
+import { navCategory } from '../data';
+import { useState } from 'react';
 
-const Header = ({theme, setTheme, changeMode}) => {
+const Header = ({ theme, setTheme, changeMode }) => {
+  const [navCategoryTitle] = useState(navCategory);
+
   return (
-    <>
+    <div className='navbarWrapper'>
       <nav className="navbar " id={theme ? 'dark-mode' : 'light-mode'}>
         <div className="container-fluid">
           {/* mode switch */}
@@ -70,26 +74,15 @@ const Header = ({theme, setTheme, changeMode}) => {
               className="navbar-nav me-auto mb-2 mb-lg-0"
               id={theme ? 'dark-mode' : 'light-mode'}
             >
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Introduction
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Projects
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Board
-                </a>
-              </li>
+              {navCategory.map((nc, i) => {
+                return (
+                  <li className="nav-item" key={i}>
+                    <a className="nav-link active" aria-current="page" href="#">
+                      {navCategory[i]}
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
             <form className="d-flex" role="search">
               <input
@@ -111,30 +104,20 @@ const Header = ({theme, setTheme, changeMode}) => {
         id={theme ? 'dark-mode' : 'light-mode'}
       >
         <ul class="nav nav-underline">
-          <li class="nav-item">
+          {navCategory.map((nc, i)=>{
+            return(
+              <li class="nav-item" key={i}>
             <a class="nav-link link-dark" aria-current="page" href="#">
-              Home
+              {navCategory[i]}
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link link-dark" href="#">
-              Introduction
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-dark" href="#">
-              Projects
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-dark" href="#">
-              Board
-            </a>
-          </li>
+            )
+          })}
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 
 export default Header;
+

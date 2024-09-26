@@ -104,4 +104,20 @@ const java = [
   },
 ]
 
-export {react, vue, javascript, java}
+{/* visual image */}
+const visual = [
+  {
+    image: 'image/website-1.png'
+  },
+  {
+    image: 'image/website-2.png'
+  },
+  {
+    image: 'image/website-3.png'
+  },
+]
+
+{/* nav category */}
+const navCategory = ['Home','Introduction','Projects','Board'];
+
+export {react, vue, javascript, java, visual, navCategory}

@@ -44,7 +44,7 @@ function App() {
         footer가 과연 필요한가?
       </div>
 
-      <img src='/image/totop.png' alt='totop' className='totop' onClick={totop}/>
+      <i class="bi bi-arrow-up-short totop" onClick={totop}></i>
     </div>
   );
 }
