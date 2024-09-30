@@ -47,6 +47,7 @@ const Projects = () => {
     <div className="container-md mt-4">
       <h2 className="mt-4 mb-4 text-center">
         <u>My Portfolios</u>
+        <p>github address <span>https://github.com/yar0103</span></p>
       </h2>
 
       {/* tab category */}

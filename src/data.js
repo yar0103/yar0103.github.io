@@ -118,7 +118,7 @@ const visual = [
 ]
 
 {/* nav category */}
-const navCategory = ['Home','Projects','Introduction','Board'];
+const navCategory = ['Home','Projects','Skills','Introduction','Board'];
 
 {/* introduction */}
 const introCardItem = [
@@ -152,4 +152,26 @@ const introCardItem = [
   },
 ]
 
-export {react, vue, javascript, java, visual, navCategory, introCardItem};
+{/* skills */}
+const skills = [
+  {
+    id:0,
+    title:'Javascript',
+    level:'중상',
+    image:'./image/skill-1.png'
+  },
+  {
+    id:1,
+    title:'React',
+    level:'중상',
+    image:'./image/skill-2.png'
+  },
+  {
+    id:2,
+    title:'Vue',
+    level:'상',
+    image:'./image/skill-3.png'
+  },
+]
+
+export {react, vue, javascript, java, visual, navCategory, introCardItem, skills};

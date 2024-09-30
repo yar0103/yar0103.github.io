@@ -3,8 +3,9 @@ import { useState, createContext } from 'react';
 
 //components
 import Visual from './components/Visual';
-import Introduction from './components/Introduction';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Introduction from './components/Introduction';
 import Header from './components/Header';
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
 
       {/* projects */}
       <Projects  />
+
+      {/* skills */}
+      <Skills />
 
       {/* introduction */}
       <Introduction theme={theme} setTheme={setTheme} changeMode={changeMode}/>
