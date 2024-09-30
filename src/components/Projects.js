@@ -47,8 +47,9 @@ const Projects = () => {
     <div className="container-md mt-4">
       <h2 className="mt-4 mb-4 text-center">
         <u>My Portfolios</u>
-        <p>github address <span>https://github.com/yar0103</span></p>
       </h2>
+      <h4 className='text-center'><a href="https://github.com/yar0103/" class="link-success">
+      <i class="bi bi-github" style={{fontSize: 35}}></i> 깃허브 바로가기</a></h4>
 
       {/* tab category */}
       <div class="nav nav-tabs" id="nav-tab" role="tablist">

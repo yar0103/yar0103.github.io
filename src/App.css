@@ -63,16 +63,27 @@ a {
   transition: all 0.5s;
 }
 
-.totop{
-  float: right;
-  font-size: 50px;
+.totop {
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
   margin-right: 1.2rem;
   position: fixed;
   bottom: 40px;
-  right: -0.5rem;
+  right: -0.1rem;
+  background-color: rgb(228, 160, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .btn-warning{
   color: rgb(82, 77, 71);
   font-weight: 600;
+}
+
+.shadowEffect{
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
 }
