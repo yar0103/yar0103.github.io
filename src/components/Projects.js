@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import {react, vue, javascript, java} from '../data';
+import { react, vue, javascript, java } from '../data';
+
+import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   const [reactData, setReactData] = useState(react);
@@ -8,11 +10,38 @@ const Projects = () => {
   const [javaData, setJavaData] = useState(java);
 
   useEffect(() => {
-    setReactData(reactData)
-    setVueData(vueData)
-    setJavascriptData(javascriptData)
-    setJavaData(javaData)
-  }, [])
+    setReactData(react);
+    setVueData(vue);
+    setJavascriptData(javascript);
+    setJavaData(java);
+  }, []);
+
+  const titleSort = (data) => {
+    return [...data].sort((a,b)=>{
+      if(a.title > b.title) return 1;
+      if(a.title < b.title) return -1;
+      return 0;
+    });
+  };
+
+  const titleSortStart = () => {
+    const sortedReact = titleSort(reactData);
+    const sortedVue = titleSort(vueData);
+    const sortedJavascript = titleSort(javascriptData);
+    const sortedJava = titleSort(javaData);
+  
+    setReactData(sortedReact);
+    setVueData(sortedVue);
+    setJavascriptData(sortedJavascript);
+    setJavaData(sortedJava);
+  };
+  
+  const baseSort = () => {
+    setReactData(react);
+    setVueData(vue);
+    setJavascriptData(javascript);
+    setJavaData(java);
+  }
 
   return (
     <div className="container-md mt-4">
@@ -72,6 +101,11 @@ const Projects = () => {
         </button>
       </div>
 
+      <div className='sort mt-4'>
+        <button type="button" class="btn btn-warning" onClick={titleSortStart}>가나다순</button>
+        <button type="button" class="btn btn-warning ms-2" onClick={baseSort}>되돌리기</button>
+      </div>
+
       {/* category Lists */}
       <div class="tab-content" id="nav-tabContent">
         {/* react Lists */}
@@ -83,34 +117,7 @@ const Projects = () => {
           tabindex="0"
         >
           <div class="row row-cols-1 mt-1 row-cols-md-2 g-4">
-            {react.map((r, i) => {
-              return (
-                <div class="col" key={i}>
-                  <div class="card">
-                    <div class="ratio ratio-16x9">
-                      <iframe
-                        src={r.video}
-                        class="card-img-top"
-                        alt="..."
-                      />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">{r.title}</h5>
-                      <p class="card-text">
-                        {r.subTitle}<br /><br />
-                        {r.mainFunction} <br /><br />
-                        {r.result} <br /><br />
-                        <button type="button" class="btn btn-secondary">
-                          <a href={r.link}>
-                            구경가기
-                          </a>
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+            {reactData.map((r,i) => <ProjectCard key={i} item={r} />)}
           </div>
         </div>
 
@@ -124,34 +131,7 @@ const Projects = () => {
           tabindex="0"
         >
           <div class="row row-cols-1 mt-1 row-cols-md-2 g-4">
-          {vue.map((v, i) => {
-              return (
-                <div class="col" key={i}>
-                  <div class="card">
-                    <div class="ratio ratio-16x9">
-                      <iframe
-                        src={v.video}
-                        class="card-img-top"
-                        alt="..."
-                      />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">{v.title}</h5>
-                      <p class="card-text">
-                        {v.subTitle}<br /><br />
-                        {v.mainFunction} <br /><br />
-                        {v.result} <br /><br />
-                        <button type="button" class="btn btn-secondary">
-                          <a href={v.link}>
-                            구경가기
-                          </a>
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+            {vueData.map((v, i) => <ProjectCard key={i} item={v} />)}
           </div>
         </div>
 
@@ -165,34 +145,7 @@ const Projects = () => {
           tabindex="0"
         >
           <div class="row row-cols-1 mt-1 row-cols-md-2 g-4">
-            {javascript.map((js,i)=>{
-              return(
-                <div class="col" key={i}>
-                  <div class="card">
-                    <div class="ratio ratio-16x9">
-                      <iframe
-                        src={js.video}
-                        class="card-img-top"
-                        alt="..."
-                      />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">{js.title}</h5>
-                      <p class="card-text">
-                        {js.subTitle}<br /><br />
-                        {js.mainFunction} <br /><br />
-                        {js.result} <br /><br />
-                        <button type="button" class="btn btn-secondary">
-                          <a href={js.link}>
-                            구경가기
-                          </a>
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+            {javascriptData.map((js, i) => <ProjectCard key={i} item={js} />)}
           </div>
         </div>
 
@@ -206,34 +159,7 @@ const Projects = () => {
           tabindex="0"
         >
           <div class="row row-cols-1 mt-1 row-cols-md-2 g-4">
-          {java.map((jv,i)=>{
-              return(
-                <div class="col" key={i}>
-                  <div class="card">
-                    <div class="ratio ratio-16x9">
-                      <iframe
-                        src={jv.video}
-                        class="card-img-top"
-                        alt="..."
-                      />
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">{jv.title}</h5>
-                      <p class="card-text">
-                        {jv.subTitle}<br /><br />
-                        {jv.mainFunction} <br /><br />
-                        {jv.result} <br /><br />
-                        <button type="button" class="btn btn-secondary">
-                          <a href={jv.link}>
-                            구경가기
-                          </a>
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+            {javaData.map((jv, i) => <ProjectCard key={i} item={jv} />)}
           </div>
         </div>
 

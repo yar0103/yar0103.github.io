@@ -71,3 +71,8 @@ a {
   bottom: 40px;
   right: -0.5rem;
 }
+
+.btn-warning{
+  color: rgb(82, 77, 71);
+  font-weight: 600;
+}
