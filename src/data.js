@@ -118,6 +118,38 @@ const visual = [
 ]
 
 {/* nav category */}
-const navCategory = ['Home','Introduction','Projects','Board'];
+const navCategory = ['Home','Projects','Introduction','Board'];
 
-export {react, vue, javascript, java, visual, navCategory}
+{/* introduction */}
+const introCardItem = [
+  {
+    id:0,
+    title:'Drawing',
+    content:'손으로 그리거나 만드는 것을 좋아합니다.',
+    en: 'I like drawing and making things by hand.',
+    image: './image/hobby-1.png'
+  },
+  {
+    id:1,
+    title:'Walking',
+    content:'자연을 좋아하고 걷는걸 즐깁니다.',
+    en: 'I love nature and enjoy walking.',
+    image: './image/hobby-2.png'
+  },
+  {
+    id:2,
+    title:'Music',
+    content:'음악과 함께하면 행복해 집니다.',
+    en: 'Being with music makes me happy.',
+    image: './image/hobby-3.png'
+  },
+  {
+    id:3,
+    title:'Picture',
+    content:'아름다운 곳을 사진으로 남겨요.',
+    en: 'Take pictures of beautiful places.',
+    image: './image/hobby-4.png'
+  },
+]
+
+export {react, vue, javascript, java, visual, navCategory, introCardItem};

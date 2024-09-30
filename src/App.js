@@ -28,11 +28,11 @@ function App() {
       {/* visual */}
       <Visual />
 
-      {/* introduction */}
-      <Introduction theme={theme} setTheme={setTheme} changeMode={changeMode}/>
-
       {/* projects */}
       <Projects  />
+
+      {/* introduction */}
+      <Introduction theme={theme} setTheme={setTheme} changeMode={changeMode}/>
 
       {/* board */}
       <div className="container-md mt-4">

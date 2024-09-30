@@ -3,7 +3,7 @@ import { visual } from '../data';
 
 const Visual = () => {
   const [visualImage] = useState(visual);
-  console.log(visualImage);
+
   return (
     <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true" style={{ marginTop: '160px' }}>
       <div className="carousel-inner">
@@ -12,7 +12,7 @@ const Visual = () => {
           return (
             <div className="carousel-item active" key={i}>
               <img
-                src={visualImage[i].image}
+                src={img.image}
                 className="d-block w-100"
                 alt="visual"
               />
