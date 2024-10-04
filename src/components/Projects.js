@@ -44,15 +44,15 @@ const Projects = () => {
   }
 
   return (
-    <div className="container-md mt-4">
-      <h2 className="mt-4 mb-4 text-center">
+    <div className="container-md mt-5 mb-5">
+      <h2 className="mt-6 text-center">
         <u>My Portfolios</u>
       </h2>
       <h4 className='text-center'><a href="https://github.com/yar0103/" class="link-success">
-      <i class="bi bi-github" style={{fontSize: 35}}></i> 깃허브 바로가기</a></h4>
+      <i class="bi bi-github" style={{fontSize: 30}}></i> 깃허브 바로가기</a></h4>
 
       {/* tab category */}
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <div class="nav nav-tabs mt-5" id="nav-tab" role="tablist">
         <button
           class="nav-link active"
           id="nav-react-tab"

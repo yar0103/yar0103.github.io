@@ -5,8 +5,8 @@ const Skills = () => {
   const [skill, setSkill] = useState(skills);
 
   return (
-    <div className="container-md mt-4">
-      <h2 className="mb-4 text-center">
+    <div className="container-md mt-5 mb-5">
+      <h2 className="mb-3 text-center">
         <u>Skill Level</u>
       </h2>
       <div class="row row-cols-1 row-cols-md-3 g-2 text-center">

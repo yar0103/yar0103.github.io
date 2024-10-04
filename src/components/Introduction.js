@@ -1,15 +1,17 @@
 import IntroductionCard from './IntroductionCard';
 
-const Introduction = ({theme}) => {
+const Introduction = ({ theme }) => {
   return (
-    <div className="container-md mt-4 text-center">
-        <div className="row ">
-          <h2 className="mt-4 mb-4" id={theme ? 'dark-mode' : 'light-mode'}>
-            <u>Introduction Yu A Rin</u>
-          </h2>
+    <div className="container-md text-center">
+      <div className="row">
+        <h2 className="mt-5 mb-3" id={theme ? 'dark-mode' : 'light-mode'}>
+          <u>Introduction Yu A Rin</u>
+        </h2>
+        <div className='row mb-5'>
           <IntroductionCard />
         </div>
       </div>
+    </div>
   )
 }
 

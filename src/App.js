@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Introduction from './components/Introduction';
 import Header from './components/Header';
+import Board from './components/Board';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
     setTheme(!theme);
   };
 
-  function totop () {
+  function totop() {
     window.scrollTo(0, 0);
   };
 
@@ -30,22 +31,20 @@ function App() {
       <Visual />
 
       {/* projects */}
-      <Projects  />
+      <Projects />
 
       {/* skills */}
       <Skills />
 
       {/* introduction */}
-      <Introduction theme={theme} setTheme={setTheme} changeMode={changeMode}/>
+      <Introduction theme={theme} setTheme={setTheme} changeMode={changeMode} />
 
       {/* board */}
-      <div className="container-md mt-4">
-        
-      </div>
+      <Board />
 
       {/* footer */}
       <div className='footer'>
-        footer가 과연 필요한가?
+
       </div>
 
       <i class="bi bi-arrow-up-short totop" onClick={totop}></i>

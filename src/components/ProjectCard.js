@@ -1,6 +1,6 @@
 const ProjectCard = ({ item }) => {
   return (
-    <div className="col">
+    <div className="col mb-5">
       <div className="card shadowEffect">
         <div className="ratio ratio-16x9">
           <iframe src={item.video} className="card-img-top" alt="..." />

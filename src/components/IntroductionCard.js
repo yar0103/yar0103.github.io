@@ -9,7 +9,7 @@ const IntroductionCard = () => {
       {
         introCards.map((item, i) => {
           return (
-            <div className="col-sm-6 col-xl-3 mt-4 mb-sm-0 " key={i}>
+            <div className="col-sm-6 col-xl-3 mb-sm-0" key={i}>
               <div className="card text-bg-dark" >
                 <img src={item.image} className="card-img" alt="..." />
                 <div className="card-img-overlay ">
