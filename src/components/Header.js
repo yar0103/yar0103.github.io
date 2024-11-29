@@ -108,7 +108,7 @@ const Header = ({ theme, setTheme, changeMode }) => {
             return(
               <li class="nav-item" key={i}>
             <a class="nav-link link-dark" aria-current="page" href="#">
-              {navCategory[i]}
+              {nc}
             </a>
           </li>
             )

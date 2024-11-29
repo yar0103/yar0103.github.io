@@ -1,4 +1,4 @@
-{/* react */}
+{/* react */ }
 const react = [
   {
     id: 1,
@@ -38,29 +38,29 @@ const react = [
   },
 ]
 
-{/* vue */}
+{/* vue */ }
 const vue = [
   {
     id: 1,
-    title: 'Apple Store',
-    subTitle: 'React / 반응형 / JWT / Route / 기능추가중.. ',
-    mainFunction: '핵심기능 : JWT로 로그인화면 구현 및 Route활용, 오픈캔버스',
-    result: '대규모 프로젝트의 경우 코드의 정형화, 재사용성 고려, 계획적인 기능구현의 중요성을 깨닫게 되었어요',
-    link: '/appleStore',
-    video: 'image/react_applestore.mp4'
+    title: 'A-bly ShoppingMall [개인]',
+    subTitle: 'Vue / 모바일형 / axios / 기능추가중.. ',
+    mainFunction: '핵심기능 : 추천상품 필터기능과 더보기기능',
+    result: '모든 필터기능을 버튼으로 구현하면 너무 많은 코드를 작성해야해서 가장많이사용하는 버튼만 추가했지만, 앞으로 어떻게 보여줘야 할지는 좀 더 고민해야할 것 같아요. 비슷한 맥락으로 모든상품을 처음에 불러올지도 고민이 많았어요',
+    link: '/a-bly',
+    video: 'image/vue_ably.mp4'
   },
   {
     id: 2,
-    title: 'Shoes Mall',
-    subTitle: 'React / axios',
-    mainFunction: '핵심기능 : 더보기 버튼 클릭시 서버에 데이터가 있으면 가져오고 없으면 그 버튼으로 전환하여 더이상 클릭되지 않도록 구현',
-    result: 'fetch로 요청해서 가져온 데이터를 컨트롤하는 방법을 깨닫게 되었어요',
-    link: '/myshop',
-    video: 'image/react_shoesmall.mp4'
+    title: 'Vuedongsan [개인]',
+    subTitle: 'Vue / sort',
+    mainFunction: '핵심기능 : 정렬기능',
+    result: '배열을 이용한 정렬기능을 구현할 때는 반드시 깊은복사를 해서 사용해야 동작해요',
+    link: '/vue-test',
+    video: 'image/vue_ably.mp4'
   }
 ]
 
-{/* javascript */}
+{/* javascript */ }
 const javascript = [
   {
     id: 1,
@@ -91,7 +91,7 @@ const javascript = [
   },
 ]
 
-{/* java */}
+{/* java */ }
 const java = [
   {
     id: 1,
@@ -104,7 +104,7 @@ const java = [
   },
 ]
 
-{/* visual image */}
+{/* visual image */ }
 const visual = [
   {
     image: 'image/website-1.png'
@@ -117,61 +117,61 @@ const visual = [
   },
 ]
 
-{/* nav category */}
-const navCategory = ['Home','Projects','Skills','Introduction','Board'];
+{/* nav category */ }
+const navCategory = ['Home', 'Projects', 'Skills', 'Introduction', 'Board'];
 
-{/* introduction */}
+{/* introduction */ }
 const introCardItem = [
   {
-    id:0,
-    title:'Drawing',
-    content:'손으로 그리거나 만드는 것을 좋아합니다.',
+    id: 0,
+    title: 'Drawing',
+    content: '손으로 그리거나 만드는 것을 좋아합니다.',
     en: 'I like drawing and making things by hand.',
     image: './image/hobby-1.png'
   },
   {
-    id:1,
-    title:'Walking',
-    content:'자연을 좋아하고 걷는걸 즐깁니다.',
+    id: 1,
+    title: 'Walking',
+    content: '자연을 좋아하고 걷는걸 즐깁니다.',
     en: 'I love nature and enjoy walking.',
     image: './image/hobby-2.png'
   },
   {
-    id:2,
-    title:'Music',
-    content:'음악과 함께하면 행복해 집니다.',
+    id: 2,
+    title: 'Music',
+    content: '음악과 함께하면 행복해 집니다.',
     en: 'Being with music makes me happy.',
     image: './image/hobby-3.png'
   },
   {
-    id:3,
-    title:'Picture',
-    content:'아름다운 곳을 사진으로 남겨요.',
+    id: 3,
+    title: 'Picture',
+    content: '아름다운 곳을 사진으로 남겨요.',
     en: 'Take pictures of beautiful places.',
     image: './image/hobby-4.png'
   },
 ]
 
-{/* skills */}
+{/* skills */ }
 const skills = [
   {
-    id:0,
-    title:'Javascript',
-    level:'중상',
-    image:'./image/skill-1.png'
+    id: 0,
+    title: 'Javascript',
+    level: '중상',
+    image: './image/skill-1.png'
   },
   {
-    id:1,
-    title:'React',
-    level:'중상',
-    image:'./image/skill-2.png'
+    id: 1,
+    title: 'React',
+    level: '중상',
+    image: './image/skill-2.png'
   },
   {
-    id:2,
-    title:'Vue',
-    level:'상',
-    image:'./image/skill-3.png'
+    id: 2,
+    title: 'Vue',
+    level: '상',
+    image: './image/skill-3.png'
   },
 ]
 
-export {react, vue, javascript, java, visual, navCategory, introCardItem, skills};
+export { react, vue, javascript, java, visual, navCategory, introCardItem, skills };
